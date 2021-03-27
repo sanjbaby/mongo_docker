@@ -15,7 +15,7 @@ RUN apt-get update
 RUN apt-get install -y ${MONGO_PACKAGE}=$MONGO_VERSION
 VOLUME ["/data/db"]
 WORKDIR /data
-EXPOSE 27017
+EXPOSE 27018
 ENV MONGO_INITDB_ROOT_USERNAME admin
 ENV MONGO_INITDB_ROOT_PASSWORD password
 CMD ["mongod", "--smallfiles"]
